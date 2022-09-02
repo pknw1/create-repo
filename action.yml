@@ -1,0 +1,27 @@
+name: 'Create a new repository in an organization'
+description: 'Creates a Repository'
+branding:
+  icon: 'folder-plus'
+  color: 'blue'
+
+inputs:
+  repo-name:  # change this as needed
+    description: 'Requested repository name'
+    required: true
+    default: ''
+  org-name:
+    description: 'Organization name'
+    required: true
+    default: ''
+  org-admin-token:
+    description: 'Organization admin token with admin:org scope'
+    required: true
+    default: ''
+outputs:
+  repo-url: # change this as needed
+    description: 'URL of the created repository'
+  repo-fullname:
+    description: 'Fullname of the repo, eg <organization>/<repo>'
+runs:
+  using: 'node16'
+  main: 'index.js'
