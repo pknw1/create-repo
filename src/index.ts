@@ -6,6 +6,7 @@ const ghToken = core.getInput('org-admin-token');
 
 const main = async () => 
 {
+  console.log(`Creating repository ${repoName} in organization ${orgName}`);
   try {
       var result = await request("GET /orgs/{org}/repos", {
           headers: {
