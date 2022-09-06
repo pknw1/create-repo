@@ -7,7 +7,7 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
 (async function main() {
     try {
         const { request } = require("@octokit/request");
-        const result = await request("GET /orgs/{org}/repos", {
+        const result = await request(`POST /orgs/${orgName}/repos`, {
             headers: {
                 authorization: `token ${ghToken}`,
             },
