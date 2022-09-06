@@ -1,4 +1,4 @@
-name: 'Create a new repository in an organization'
+name: 'Create a new repository in specified organization'
 description: 'Creates a Repository'
 branding:
   icon: 'folder-plus'
@@ -24,4 +24,4 @@ outputs:
     description: 'Fullname of the repo, eg <organization>/<repo>'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
