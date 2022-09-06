@@ -21,7 +21,7 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
             has_wiki: true
         });
         core.setOutput("repo-fullname", result.full_name);
-        core.setOutput("repo-url", result.url);
+        core.setOutput("repo-url", result.html_url);
     }
     catch (e) {
         core.setFailed(e.message);
