@@ -1,4 +1,4 @@
-"use strict";
+import { stringify } from "querystring";
 const core = require('@actions/core');
 const repoName = core.getInput('repo-name');
 const orgName = core.getInput('org-name');
@@ -20,6 +20,7 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
             has_projects: true,
             has_wiki: true
         });
+        console.log(`stringifyed result ${stringify(result)}`);
         core.setOutput("repo-fullname", result.full_name);
         core.setOutput("repo-url", result.html_url);
     }
