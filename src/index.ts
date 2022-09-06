@@ -1,5 +1,6 @@
 const core = require('@actions/core');
-const request = require("@octokit/request");
+
+
 const repoName = core.getInput('repo-name');
 const orgName = core.getInput('org-name');
 const ghToken = core.getInput('org-admin-token');
@@ -9,7 +10,9 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
 (async function main () {
 
   try {
-      var result = await request("GET /orgs/{org}/repos", {
+      const { request } = require("@octokit/request");
+      
+      const result = await request("GET /orgs/{org}/repos", {
           headers: {
             authorization: `token ${ ghToken }`,
           },
