@@ -1,3 +1,4 @@
+"use strict";
 const core = require('@actions/core');
 const request = require("@octokit/request");
 const repoName = core.getInput('repo-name');
@@ -27,4 +28,3 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
     }
     // You can use await inside this function block
 })();
-export {};

@@ -32,5 +32,3 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
     }
     // You can use await inside this function block
 })();
-export { };
-
