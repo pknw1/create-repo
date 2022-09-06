@@ -2,7 +2,7 @@
   "name": "create-repo",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "description": "TypeScript template action",
   "main": "dist/main.js",
   "scripts": {
