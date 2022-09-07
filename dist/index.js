@@ -22,8 +22,9 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
             has_wiki: true
         });
         console.log(`stringifyed result ${queryString.stringify(result)}`);
-        core.setOutput("repo-fullname", result.full_name);
-        core.setOutput("repo-url", result.html_url);
+        console.log(`stringifyed result ${queryString.stringify(result.data)}`);
+        core.setOutput("repo-fullname", result.data.full_name);
+        core.setOutput("repo-url", result.data.html_url);
     }
     catch (e) {
         core.setFailed(e.message);
