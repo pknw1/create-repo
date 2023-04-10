@@ -19,7 +19,6 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
             'private': true,
             has_issues: true,
             has_projects: true,
-            is_template: true,
             has_wiki: true
         });
         console.log(`stringifyed result ${queryString.stringify(result)}`);
