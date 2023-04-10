@@ -18,6 +18,7 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
             homepage: 'https://github.com',
             'private': true,
             has_issues: true,
+            auto_init: true,
             has_projects: true,
             has_wiki: true
         });
