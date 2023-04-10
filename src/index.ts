@@ -23,6 +23,7 @@ console.log(`Creating repository ${repoName} in organization ${orgName}`);
           'private': true,
           has_issues: true,
           auto_init: true,
+          is_template: true,
           has_projects: true,
           has_wiki: true
       })
